@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rutina Gym Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>🏋️ Rutina de Gimnasio + Running</h1>
+
+  <div id="seleccion-rutina">
+    <label><input type="radio" name="rutina" value="3dias"> Rutina 3 Días</label>
+    <label><input type="radio" name="rutina" value="4dias"> Rutina 4 Días</label>
+    <button onclick="mostrarRutina()">Mostrar Rutina</button>
+  </div>
+
+  <div id="contenido"></div>
+
+  <!-- Sección de Carrera -->
+  <div id="cardio" style="margin-top: 20px;">
+    <h3>🏃 Carrera (opcional)</h3>
+    <label>Tiempo (min): <input type="number" step="0.1" id="tiempo"></label><br>
+    <label>Distancia (km): <input type="number" step="0.1" id="distancia"></label><br>
+    <label>Ritmo (min/km): <input type="number" step="0.1" id="ritmo"></label>
+  </div>
+
+  <button onclick="guardarDatos()">Guardar Sesión</button>
+
+  <div id="progreso">
+    <h2>📈 Seguimiento</h2>
+    <button onclick="mostrarProgreso()">Ver Progreso</button>
+    <pre id="progreso-texto"></pre>
+  </div>
+
+  <div id="historial">
+    <h2>📁 Historial</h2>
+    <button onclick="mostrarHistorial()">Ver Historial</button>
+    <ul id="lista-historial"></ul>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
